@@ -16,10 +16,13 @@ export const Colors = {
         secondary: '#E0E0E0', // Off-white for secondary actions
         accent: '#FF453A', // Subtle red for errors or alerts
         border: '#2A2A2A',
-        success: '#32D74B',
-        overlay: 'rgba(0,0,0,0.7)',
+        success: '#51CF66',
+        error: '#FF6B6B',
+        warning: '#FFB84D',
+        info: '#4DABF7',
+        overlay: 'rgba(0, 0, 0, 0.7)',
     },
-    // We primarily support dark mode, but keeping a light structure just in case, 
+    // We primarily support dark mode, but keeping a light structure just in case,
     // though it maps to dark values for now to enforce the aesthetic.
     light: {
         background: '#0A0A0A',
@@ -33,7 +36,10 @@ export const Colors = {
         secondary: '#E0E0E0',
         accent: '#FF453A',
         border: '#2A2A2A',
-        success: '#32D74B',
-        overlay: 'rgba(0,0,0,0.7)',
+        success: '#51CF66',
+        error: '#FF6B6B',
+        warning: '#FFB84D',
+        info: '#4DABF7',
+        overlay: 'rgba(0, 0, 0, 0.7)',
     },
 };
