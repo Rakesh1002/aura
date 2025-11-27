@@ -14,26 +14,54 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors.dark.primary,
-        tabBarInactiveTintColor: Colors.dark.textSecondary,
+        tabBarInactiveTintColor: Colors.dark.textMuted,
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarStyle: Platform.select({
           ios: {
             position: 'absolute',
-            backgroundColor: Colors.dark.surfaceHighlight,
+            backgroundColor: 'rgba(26, 26, 26, 0.95)',
             borderTopColor: Colors.dark.border,
+            borderTopWidth: 1,
+            paddingTop: 8,
+            paddingBottom: 24,
+            height: 88,
           },
           default: {
-            backgroundColor: Colors.dark.surfaceHighlight,
+            backgroundColor: 'rgba(26, 26, 26, 0.95)',
             borderTopColor: Colors.dark.border,
+            borderTopWidth: 1,
+            paddingTop: 8,
+            paddingBottom: 8,
+            height: 64,
           },
         }),
+        tabBarShowLabel: false,
+        tabBarLabelStyle: {
+          display: 'none',
+        },
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Vibes',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Library',
+          tabBarIcon: ({ color }) => <IconSymbol size={26} name="photo.stack.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="generate"
+        options={{
+          title: 'Generate',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="wand.and.stars" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <IconSymbol size={26} name="gearshape.fill" color={color} />,
+        }}
+      />
     </Tabs>
   );
 }
